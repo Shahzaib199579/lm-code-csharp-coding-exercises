@@ -47,10 +47,10 @@ namespace Exercises.Tests
         public void AddVat_Should_Throw_Argument_Exception()
         {
             // Advanced challenge - uncomment these lines and make this test pass too.
-            //var ex = Assert.Throws<ArgumentException>(() => Exercise001.AddVat(-25, 0));
-            //Assert.That(ex.Message, Is.EqualTo("Price cannot be negative. Please enter a valid price."));
-            //ex = Assert.Throws<ArgumentException>(() => Exercise001.AddVat(25, -5));
-            //Assert.That(ex.Message, Is.EqualTo("VAT cannot be negative. Please enter a valid VAT."));
+            var ex = Assert.Throws<ArgumentException>(() => Exercise001.AddVat(-25, 0));
+            Assert.That(ex.Message, Is.EqualTo("Price cannot be negative. Please enter a valid price."));
+            ex = Assert.Throws<ArgumentException>(() => Exercise001.AddVat(25, -5));
+            Assert.That(ex.Message, Is.EqualTo("VAT cannot be negative. Please enter a valid VAT."));
         }
 
         [Test]
