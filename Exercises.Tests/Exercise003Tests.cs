@@ -47,5 +47,12 @@ namespace Exercises.Tests
 
             Exercise003.IceCreamFlavours.Should().Equal(expected);
         }
+
+        [Test]
+        public void IceCreamCode_Should_Return_NUll_If_Flavour_NUll_Or_Empty_String()
+        {
+            Exercise003.IceCreamCode(null).Should().Be(null);
+            Exercise003.IceCreamCode("").Should().Be(null);
+        }
     }
 }
