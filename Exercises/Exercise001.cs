@@ -46,9 +46,7 @@ namespace Exercises
 
         public int CountLinuxUsers(List<User> users)
         {
-            if (users == null)
-                return 0;
-            else if (users.Count() == 0)
+            if (users == null || users.Count() == 0)
                 return 0;
 
             return users.Where(x => String.Equals(x.Type, "Linux")).Count();

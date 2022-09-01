@@ -6,10 +6,7 @@ namespace Exercises
     {
         public bool IsFromManchester(Person person)
         {
-            if (person == null)
-                return false;
-
-            return person.City.ToLower().Equals("manchester");
+            return person != null && person.City.ToLower().Equals("manchester");
         }
 
         public bool CanWatchFilm(Person person, int ageLimit)
